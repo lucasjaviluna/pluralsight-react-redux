@@ -7,3 +7,6 @@ eslintrc:
  0 Off
  1 Warning
  2 Error
+
+Test:
+ npm test
