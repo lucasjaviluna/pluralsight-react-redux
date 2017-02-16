@@ -3,7 +3,7 @@ import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import CourseForm from './CourseForm';
 
-function setup(saving) {
+function setup(saving = false) {
   let props = {
     course: {},
     saving: saving,
