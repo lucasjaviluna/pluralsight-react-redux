@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import {notFound} from '../../actions/notFoundAction';
 
 class NotFound extends React.Component {
-  constructor() {
-    super();
-    console.log('NOTFOUND');
+  componentWillMount() {
+    const { store } = this.context;
+    store.dispatch(notFound());
   }
 
   render() {
@@ -15,5 +16,9 @@ class NotFound extends React.Component {
     );
   }
 }
+
+NotFound.contextTypes = {
+  store: PropTypes.object
+};
 
 export default NotFound;
